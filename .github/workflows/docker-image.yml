@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file sample-packages/docker/Dockerfile --tag ghcr.io/exercise-publish-package-image-name:latest
+      run: docker build . --file sample-packages/docker/Dockerfile --tag ghcr.io/zeeket/exercise-publish-package-image-name:latest
     - name: Publish the Docker image
       run: |
             echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u zeeket --password-stdin
