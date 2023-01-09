@@ -19,6 +19,6 @@ jobs:
     - name: Publish the Docker image
       run: |
             echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u zeeket --password-stdin
-            docker push ghcr.io/zeeket/exercise-publish-package-image-name:latest
+            docker push zeeket/exercise-publish-package-image-name:latest
   
     
