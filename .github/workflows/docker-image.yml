@@ -1,0 +1,24 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build-publish:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file ./sample-packages/Docker/Dockerfile --tag exercise-publish-package-image-name:latest
+    - name: Publish the Docker image
+      run: |
+            echo $GITHUB_TOKEN | docker login ghcr.io -u USERNAME --password-stdin
+            docker push ghcr.io/zeeket/exercise-publish-package-image-name:latest
+  
+    
