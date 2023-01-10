@@ -1,5 +1,5 @@
 {
-  "name": "exercise-publish-package",
+  "name": "@zeeket/exercise-publish-package",
   "description": "A GitHub Actions learning path exercise",
   "version": "1.0.0",
   "scripts": {
