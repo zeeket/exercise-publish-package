@@ -1,3 +1,19 @@
 {
-  "your": "json config here"
+  "name": "exercise-publish-package",
+  "description": "A GitHub Actions learning path exercise",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"No tests, just pass\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zeeket/exercise-publish-package.git"
+  },
+  "keywords": [],
+  "author": "zeeket",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeeket/exercise-publish-package/issues"
+  },
+  "homepage": "https://github.com/zeeket/exercise-publish-package"
 }
