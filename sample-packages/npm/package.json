@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/zeeket/exercise-publish-package/issues"
   },
-  "homepage": "https://github.com/zeeket/exercise-publish-package"
+  "homepage": "https://github.com/zeeket/exercise-publish-package",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }
