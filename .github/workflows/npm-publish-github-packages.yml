@@ -15,9 +15,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          working-directory: sample-packages/npm
       - run: npm ci
+        working-directory: sample-packages/npm
       - run: npm test
+        working-directory: sample-packages/npm
 
   publish-gpr:
     needs: build
@@ -30,9 +31,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          working-directory: sample-packages/npm
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
+        working-directory: sample-packages/npm
       - run: npm publish
+        working-directory: sample-packages/npm
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
